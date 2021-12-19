@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            border-spacing: 0;
+            text-align: center;
+            margin: auto;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+        </style>
+    </head>
+    <body>
+        <div>Data KTP</div>
+        <hr>                
+        <table>
+            <thead>
+                <tr>
+                    <th> ID </th>
+                    <th> No. KTP </th>
+                    <th> Nama </th>
+                    <th> Alamat </th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="data,state:${data}">
+                    <td th:text="${state.index+1}"> ID </td>
+                    <td th:text="${data[0]}"> No. KTP </td>
+                    <td th:text="${data[1]}"> Nama </td>
+                    <td th:text="${data[2]}"> Alamat </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
